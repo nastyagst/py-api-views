@@ -1,11 +1,19 @@
-from django.core.serializers import serialize
-from rest_framework import status, generics, mixins, viewsets
+from rest_framework import (
+    status,
+    generics,
+    mixins,
+    viewsets,
+)
 from rest_framework.response import Response
-from rest_framework.status import HTTP_200_OK
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 
-from .models import Genre, Actor, CinemaHall, Movie
+from .models import (
+    Genre,
+    Actor,
+    CinemaHall,
+    Movie,
+)
 from .serializers import (
     GenreSerializer,
     ActorSerializer,
